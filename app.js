@@ -18,3 +18,5 @@ const carros = [
 app.get("/carros", (req, res) => {
     res.status(200).json(carros);
 });
+
+export default app;
