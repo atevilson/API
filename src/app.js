@@ -1,4 +1,12 @@
 import express from "express";
+import db from "./database/dbConnect.js";
+
+// Conexão do banco com a API
+
+db.on("error", console.log.bind(console, "Erro na conexão com o banco de dados!"));
+db.once("open", () => {
+    console.log("Conexão com o banco bem sucedida!");
+});
 
 const app = express();
 
@@ -17,6 +25,11 @@ const carros = [
 
 app.get("/carros", (req, res) => {
     res.status(200).json(carros);
+});
+
+app.post("/carros", (req, res) => {
+    carros.push(req.body);
+    res.status(201).send("Carro cadastrado!");
 });
 
 export default app;
