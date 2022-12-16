@@ -34,3 +34,5 @@ class CarrosController {
         });
     }
 }
+
+export default CarrosController;

@@ -1,5 +1,6 @@
 import express from "express";
 import db from "./database/dbConnect.js";
+import routes from "./routes/index.js"
 
 // Conexão do banco com a API
 
@@ -11,6 +12,8 @@ db.once("open", () => {
 const app = express();
 
 app.use(express.json());
+
+routes(app);
 
 
 export default app;
