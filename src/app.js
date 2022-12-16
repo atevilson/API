@@ -27,6 +27,11 @@ app.get("/carros", (req, res) => {
     res.status(200).json(carros);
 });
 
+// Rota de pesquisa por id
+app.get("/carros:id", (req, res) => {
+    res.status(200).json(carros);
+});
+
 app.post("/carros", (req, res) => {
     carros.push(req.body);
     res.status(201).send("Carro cadastrado!");
