@@ -33,6 +33,19 @@ class CarrosController {
             }
         });
     }
+
+    // código para atualizar carros por id
+    static atualizarCarros = (req, res) => {
+        const id = req.params.id;
+
+        carros.findByIdAndUpdate(id, {$set: req.body}, (err) => {
+            if(!err) {
+                res.status(200).send({message: "Modelo atualizado com sucesso"});
+            } else {
+                res.status(500).send({message: err.message});
+            }
+        });
+    }
 }
 
 export default CarrosController;

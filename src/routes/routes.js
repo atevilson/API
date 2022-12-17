@@ -6,7 +6,8 @@ const router = express.Router();
 router
     .get("/carros", CarrosController.buscarCarros)
     .get("/carros/:id", CarrosController.buscarCarrosPorId)
-    .post("/carros", CarrosController.cadastroDeCarros);
+    .post("/carros", CarrosController.cadastroDeCarros)
+    .put("/carros/:id", CarrosController.atualizarCarros);
 
 
 
