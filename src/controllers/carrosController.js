@@ -46,6 +46,20 @@ class CarrosController {
             }
         });
     }
+
+    // código para deletar carros por id
+    static deletarCarros = (req, res) => {
+        const id = req.params.id;    
+        
+        carros.findByIdAndDelete(id, (err) => {
+            if(!err) {
+                res.status(200).send({message: "Carro excluído com sucesso"});
+            } else {
+                res.status(500).send({message: err.message});
+            }
+        });
+    
+    }
 }
 
 export default CarrosController;
