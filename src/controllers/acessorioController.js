@@ -60,3 +60,6 @@ class AcessorioController {
 
     }
 }
+
+
+export default AcessorioController;
