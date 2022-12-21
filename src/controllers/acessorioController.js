@@ -23,12 +23,12 @@ class AcessorioController {
 
     // código para cadastrar acessorios
     static cadastroDeAcessorios = (req, res) => {
-        let acessorio = new acessorio(req.body);
-        acessorio.save((err) => {
+        let acessorios = new acessorio(req.body);
+        acessorios.save((err) => {
             if(err) {
                 res.status(500).send({message: `${err.message}, Não foi possível cadastrar o acessorio!`});
             } else {
-                res.status(201).send(acessorio.toJSON());
+                res.status(201).send(acessorios.toJSON());
             }
         });
     }

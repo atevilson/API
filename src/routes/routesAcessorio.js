@@ -1,14 +1,14 @@
 import express from "express";
-import AcessorioController from "../controllers/acessorioController";
+import AcessorioController from "../controllers/acessorioController.js";
 
-const routerAcessorio = express.Router();
+const router = express.Router();
 
-routerAcessorio
+router
     .get("/acessorio", AcessorioController.listarAcessorios)
-    .get("/acessorio", AcessorioController.buscarAcessoriosPorId)
+    .get("/acessorio/:id", AcessorioController.buscarAcessoriosPorId)
     .post("/acessorio", AcessorioController.cadastroDeAcessorios)
-    .put("/acessorio", AcessorioController.atualizarAcessorios)
-    .delete("/acessorio", AcessorioController.deletarAcessorios);
+    .put("/acessorio/:id", AcessorioController.atualizarAcessorios)
+    .delete("/acessorio/:id", AcessorioController.deletarAcessorios);
 
 
-export default routerAcessorio;
+export default router;
