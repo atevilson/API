@@ -4,7 +4,9 @@ import carros from "../models/Carro.js";
 class CarrosController {
     // código para buscar carros
     static buscarCarros = (req, res) => {
-        carros.find((err, carros) => {
+        carros.find()
+        .populate("acessorio")
+        .exec((err, carros) => {
             res.status(200).json(carros);
         });
     }
