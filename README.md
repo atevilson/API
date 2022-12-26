@@ -1,6 +1,25 @@
 ### CRUD API cadastro, pesquisa, atualização e exclusão por Id.
 
+## Para instalação das dependências use: 
 
+    npm install
+
+## Rodar o app com:
+
+    npm start
+
+## Ou se preferir rodar a partir de containers
+
+    docker-compose up -d
+
+
+## Métodos implementados nos controllers
+| Método | Descrição |
+|---|---|
+| `GET` | Retorna informações de cadastro do carro. |
+| `POST` | Utilizado para inserir um novo modelo de carro. |
+| `PUT` | Atualiza dados de um registro de modelos. |
+| `DELETE` | Remove um registro de um modelo de carro. |
 
 ### Autor
 ---
