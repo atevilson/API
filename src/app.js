@@ -1,6 +1,6 @@
 import express from "express";
 import db from "./database/dbConnect.js";
-import routes from "./routes/index.js"
+import routes from "./routes/index.js";
 
 // Conexão do banco com a API
 
